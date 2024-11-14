@@ -1,0 +1,38 @@
+
+.logo-label {
+    -fx-font-size: 24px;
+    -fx-text-fill: #DAA520;
+    -fx-padding: 10px;
+}
+
+.header-label {
+    -fx-font-size: 18px;
+    -fx-text-fill: #DAA520;
+}
+
+.form-field {
+    -fx-pref-width: 200px;
+    -fx-padding: 5px;
+    -fx-background-color: #FFFFFF;
+}
+
+.top-button, .login-button, .google-button, .navigation-button, .account-button {
+    -fx-background-color: #FFD700;
+    -fx-text-fill: #333333;
+}
+
+.highlight-label {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #FFFFFF;
+}
+
+.plan-title {
+    -fx-font-size: 16px;
+    -fx-text-fill: #DAA520;
+}
+
+.plan-cost {
+    -fx-font-size: 14px;
+    -fx-text-fill: #000000;
+}
