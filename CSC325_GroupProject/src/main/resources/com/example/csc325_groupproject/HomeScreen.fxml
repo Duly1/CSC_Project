@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="controllers.HomeScreenController" stylesheets="/resources/styles.css">
+    <!-- Background Image -->
+    <ImageView fx:id="backgroundImage" fitWidth="1024" fitHeight="600" preserveRatio="true" />
+
+    <!-- Logo and Title -->
+    <Label text="PrimeHealth Network" layoutX="20" layoutY="20" styleClass="logo-label"/>
+
+    <!-- Main Container for Options -->
+    <HBox alignment="CENTER" spacing="100" layoutX="150" layoutY="150">
+        <!-- Left Option (Join for Wellness) -->
+        <VBox alignment="CENTER" spacing="10">
+            <Label text="JOIN FOR" styleClass="overlay-text"/>
+            <Label text="WELLNESS" styleClass="overlay-text-highlight"/>
+            <Button fx:id="signUpButton" text="SIGN UP" onAction="#handleSignUp" styleClass="main-button"/>
+        </VBox>
+
+        <!-- Right Option (Access Your Health) -->
+        <VBox alignment="CENTER" spacing="10">
+            <Label text="ACCESS YOUR" styleClass="overlay-text"/>
+            <Label text="HEALTH" styleClass="overlay-text-highlight"/>
+            <Button fx:id="loginButton" text="LOGIN" onAction="#handleLogin" styleClass="main-button"/>
+        </VBox>
+    </HBox>
+</AnchorPane>

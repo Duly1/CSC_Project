@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="controllers.PlanSelectionController" stylesheets="/resources/styles.css">
+    <Label text="PrimeHealth Network" layoutX="20" layoutY="20" styleClass="logo-label"/>
+    <Button fx:id="logoutButton" text="Logout" layoutX="700" layoutY="20" onAction="#handleLogout" styleClass="top-button"/>
+
+    <!-- Plan 1: Patriot Health Platinum -->
+    <VBox layoutX="50" layoutY="100" spacing="10" styleClass="plan-container">
+        <Label text="Patriot Health Platinum" styleClass="plan-title"/>
+        <Label text="Health Medical Insurance" styleClass="plan-subtitle"/>
+        <Label text="Comprehensive health insurance for individuals, families, and groups..." styleClass="plan-description"/>
+        <Label text="Total Cost: $0.00" styleClass="plan-cost"/>
+        <Button text="SELECT" onAction="#selectPatriotHealth" styleClass="select-button"/>
+    </VBox>
+
+    <!-- Plan 2: HealthFirst Insurance -->
+    <VBox layoutX="50" layoutY="250" spacing="10" styleClass="plan-container">
+        <Label text="HealthFirst Insurance" styleClass="plan-title"/>
+        <Label text="Health Medical Insurance" styleClass="plan-subtitle"/>
+        <Label text="HealthFirst offers a range of health insurance plans for individuals, families, and small businesses..." styleClass="plan-description"/>
+        <Label text="Total Cost: $300.00" styleClass="plan-cost"/>
+        <Button text="SELECT" onAction="#selectHealthFirst" styleClass="select-button"/>
+    </VBox>
+
+    <!-- Plan 3: Blue Cross Blue Shield -->
+    <VBox layoutX="50" layoutY="400" spacing="10" styleClass="plan-container">
+        <Label text="Blue Cross Blue Shield" styleClass="plan-title"/>
+        <Label text="Health Medical Insurance" styleClass="plan-subtitle"/>
+        <Label text="Virtual care options, including 24/7 telemedicine for consultations and prescriptions. Additional wellness programs and benefits..." styleClass="plan-description"/>
+        <Label text="Total Cost: $500.00" styleClass="plan-cost"/>
+        <Button text="SELECT" onAction="#selectBlueCross" styleClass="select-button"/>
+    </VBox>
+</AnchorPane>

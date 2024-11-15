@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="controllers.OtherInfoController" stylesheets="/resources/styles.css">
+    <!-- Logo and Title -->
+    <Label text="PrimeHealth Network" layoutX="20" layoutY="20" styleClass="logo-label"/>
+    <Hyperlink text="Login" layoutX="700" layoutY="20" onAction="#goToLogin" styleClass="link-style"/>
+
+    <Label text="Let's get you started" layoutX="100" layoutY="50" styleClass="header-label"/>
+    <Label text="Just a few steps to get things going for you!" layoutX="100" layoutY="75" styleClass="subheader-label"/>
+
+    <!-- Step Indicators -->
+    <HBox layoutX="100" layoutY="100" spacing="20">
+        <Label text="1 Account Information" styleClass="step-label-active"/>
+        <Label text="2 Personal Information" styleClass="step-label-active"/>
+        <Label text="3 Other Information" styleClass="step-label"/>
+    </HBox>
+
+    <!-- Income Range and Household Size Dropdowns -->
+    <ComboBox fx:id="incomeRangeComboBox" promptText="Income Range" layoutX="100" layoutY="200" styleClass="form-field">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Under $25,000"/>
+                <String fx:value="$25,000 - $50,000"/>
+                <String fx:value="$50,000 - $75,000"/>
+                <String fx:value="$75,000 - $100,000"/>
+                <String fx:value="Above $100,000"/>
+            </FXCollections>
+        </items>
+    </ComboBox>
+
+    <ComboBox fx:id="householdSizeComboBox" promptText="Household Size" layoutX="100" layoutY="250" styleClass="form-field">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="1"/>
+                <String fx:value="2"/>
+                <String fx:value="3"/>
+                <String fx:value="4"/>
+                <String fx:value="5+"/>
+            </FXCollections>
+        </items>
+    </ComboBox>
+
+    <!-- Navigation Buttons -->
+    <Button fx:id="backButton" text="Back" layoutX="100" layoutY="350" onAction="#goToPreviousStep" styleClass="navigation-button"/>
+    <Button fx:id="nextButton" text="Next" layoutX="700" layoutY="350" onAction="#goToNextStep" styleClass="navigation-button"/>
+</AnchorPane>

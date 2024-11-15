@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="controllers.AddressInfoController" stylesheets="/resources/styles.css">
+    <!-- Logo and Title -->
+    <Label text="PrimeHealth Network" layoutX="20" layoutY="20" styleClass="logo-label"/>
+    <Hyperlink text="Login" layoutX="700" layoutY="20" onAction="#goToLogin" styleClass="link-style"/>
+
+    <Label text="Let's get you started" layoutX="100" layoutY="50" styleClass="header-label"/>
+    <Label text="Just a few steps to get things going for you!" layoutX="100" layoutY="75" styleClass="subheader-label"/>
+
+    <!-- Step Indicators -->
+    <HBox layoutX="100" layoutY="100" spacing="20">
+        <Label text="1 Account Information" styleClass="step-label-active"/>
+        <Label text="2 Personal Information" styleClass="step-label"/>
+        <Label text="3 Other Information" styleClass="step-label-inactive"/>
+    </HBox>
+
+    <!-- Address Fields -->
+    <TextField fx:id="streetAddressField" promptText="Street Address" layoutX="100" layoutY="150" styleClass="form-field"/>
+    <TextField fx:id="aptField" promptText="Apt, suite, floor, etc" layoutX="100" layoutY="200" styleClass="form-field"/>
+    <TextField fx:id="cityField" promptText="City" layoutX="100" layoutY="250" styleClass="form-field"/>
+
+    <!-- Dropdown for State -->
+    <ComboBox fx:id="stateComboBox" promptText="Select (Only Based in NY)" layoutX="100" layoutY="300" styleClass="form-field">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="NY"/>
+                <!-- Add other states if needed -->
+            </FXCollections>
+        </items>
+    </ComboBox>
+
+    <TextField fx:id="zipCodeField" promptText="Zip Code" layoutX="100" layoutY="350" styleClass="form-field"/>
+
+    <!-- Navigation Buttons -->
+    <Button fx:id="backButton" text="Back" layoutX="100" layoutY="400" onAction="#goToPreviousStep" styleClass="navigation-button"/>
+    <Button fx:id="nextButton" text="Next" layoutX="700" layoutY="400" onAction="#goToNextStep" styleClass="navigation-button"/>
+</AnchorPane>
