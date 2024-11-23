@@ -4,34 +4,21 @@
 <?import javafx.scene.layout.HBox?>
 
 <AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="controllers.SignUpController" stylesheets="/resources/styles.css">
-    <!-- Header Label -->
     <Label text="Let's get you started" layoutX="100" layoutY="50" styleClass="header-label"/>
-    
-    <!-- First Name and Middle Name -->
     <HBox layoutX="100" layoutY="100" spacing="20">
         <TextField fx:id="firstNameField" promptText="First Name" styleClass="form-field"/>
         <TextField fx:id="middleNameField" promptText="Middle Name" styleClass="form-field"/>
     </HBox>
-    
-    <!-- Last Name and Gender -->
     <HBox layoutX="100" layoutY="150" spacing="20">
         <TextField fx:id="lastNameField" promptText="Last Name" styleClass="form-field"/>
         <TextField fx:id="genderField" promptText="Gender" styleClass="form-field"/>
     </HBox>
-    
-    <!-- Date of Birth and Phone -->
     <HBox layoutX="100" layoutY="200" spacing="20">
         <TextField fx:id="dateOfBirthField" promptText="Date of Birth (MM/DD/YYYY)" styleClass="form-field"/>
         <TextField fx:id="phoneField" promptText="Mobile Phone Number" styleClass="form-field"/>
     </HBox>
-    
-    <!-- Email Field -->
     <TextField fx:id="emailField" promptText="Email Address" layoutX="100" layoutY="250" styleClass="form-field"/>
-    
-    <!-- Password and Confirm Password -->
     <TextField fx:id="passwordField" promptText="Password" layoutX="100" layoutY="300" styleClass="form-field"/>
     <TextField fx:id="confirmPasswordField" promptText="Confirm Password" layoutX="100" layoutY="350" styleClass="form-field"/>
-    
-    <!-- Next Button -->
-    <Button fx:id="nextButton" text="Next" layoutX="600" layoutY="400" onAction="#handleSignUp" styleClass="navigation-button"/>
+    <Button fx:id="nextButton" text="Next" layoutX="600" layoutY="400" onAction="#goToPersonalInformation" styleClass="navigation-button"/>
 </AnchorPane>
