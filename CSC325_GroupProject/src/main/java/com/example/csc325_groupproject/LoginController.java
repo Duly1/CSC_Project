@@ -1,13 +1,11 @@
 package com.example.csc325_groupproject;
 
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseAuthException;
-import com.google.firebase.auth.FirebaseToken;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 
 public class LoginController {
 
@@ -16,22 +14,18 @@ public class LoginController {
 
     @FXML
     public void handleLogin(ActionEvent event) {
-        String email = usernameField.getText();
+        String username = usernameField.getText();
         String password = passwordField.getText();
 
-        FirebaseService.initializeFirebase(); // Ensure Firebase is initialized
-        FirebaseAuth auth = FirebaseAuth.getInstance();
-
-        try {
-            FirebaseToken token = auth.verifyPassword(email, password);
-            showAlert(Alert.AlertType.INFORMATION, "Login Successful", "Welcome, " + email + "!");
-            // Navigate to PlanSelection.fxml
-        } catch (FirebaseAuthException e) {
-            showAlert(Alert.AlertType.ERROR, "Login Failed", e.getMessage());
+        if (username.equals("user") && password.equals("password")) { // Replace with real authentication
+            // Navigate to PlanSelection.fxml or show success
+            showAlert(AlertType.INFORMATION, "Login Successful", "Welcome, " + username + "!");
+        } else {
+            showAlert(AlertType.ERROR, "Login Failed", "Invalid username or password.");
         }
     }
 
-    private void showAlert(Alert.AlertType alertType, String title, String message) {
+    private void showAlert(AlertType alertType, String title, String message) {
         Alert alert = new Alert(alertType);
         alert.setTitle(title);
         alert.setHeaderText(null);
