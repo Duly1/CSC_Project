@@ -4,27 +4,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="controllers.LoginController" stylesheets="/resources/styles.css">
-    <!-- Background Image -->
     <ImageView fx:id="backgroundImage" fitWidth="800" fitHeight="600" />
-    
-    <!-- Header Label -->
     <Label text="Welcome Back!" layoutX="100" layoutY="50" styleClass="header-label"/>
-    
-    <!-- Username Field -->
-    <TextField fx:id="usernameField" promptText="Email" layoutX="100" layoutY="150" styleClass="form-field"/>
-    
-    <!-- Password Field -->
+
+    <TextField fx:id="usernameField" promptText="Username" layoutX="100" layoutY="150" styleClass="form-field"/>
     <PasswordField fx:id="passwordField" promptText="Password" layoutX="100" layoutY="200" styleClass="form-field"/>
-    
-    <!-- Login Button -->
+
     <Button fx:id="loginButton" text="Login" layoutX="100" layoutY="250" onAction="#handleLogin" styleClass="login-button"/>
-    
-    <!-- Forgot Password Hyperlink -->
     <Hyperlink text="Forgot Password?" layoutX="100" layoutY="280"/>
-    
-    <!-- Divider Label -->
     <Label text="OR" layoutX="100" layoutY="300"/>
-    
-    <!-- Google Sign-In Button -->
-    <Button fx:id="googleSignInButton" text="Sign in with Google" layoutX="100" layoutY="320" styleClass="google-button" onAction="#handleGoogleSignIn"/>
+    <Button fx:id="googleSignInButton" text="Sign in with Google" layoutX="100" layoutY="320" styleClass="google-button"/>
 </AnchorPane>
